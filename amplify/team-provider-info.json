@@ -1,0 +1,29 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cloudcast-dev-07b79-authRole",
+      "UnauthRoleArn": "arn:aws:iam::062582090401:role/amplify-cloudcast-dev-07b79-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::062582090401:role/amplify-cloudcast-dev-07b79-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cloudcast-dev-07b79-deployment",
+      "UnauthRoleName": "amplify-cloudcast-dev-07b79-unauthRole",
+      "StackName": "amplify-cloudcast-dev-07b79",
+      "StackId": "arn:aws:cloudformation:us-east-1:062582090401:stack/amplify-cloudcast-dev-07b79/c79cfc60-a182-11f0-a863-0affff96cbab",
+      "AmplifyAppId": "d14pkv49a8vy4x"
+    },
+    "categories": {
+      "auth": {
+        "cloudcast8167313f": {}
+      },
+      "function": {
+        "S3Triggerd27ff1bf": {
+          "deploymentBucketName": "amplify-cloudcast-dev-07b79-deployment",
+          "s3Key": "amplify-builds/S3Triggerd27ff1bf-4b2b7a43662b4b6c6f61-build.zip"
+        }
+      },
+      "storage": {
+        "s33a7f31c4": {}
+      }
+    }
+  }
+}

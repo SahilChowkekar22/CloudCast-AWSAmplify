@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A338B5A2E9014D100CD964D /* AmplifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A338B592E9014D100CD964D /* AmplifyService.swift */; };
+		5A5CF3F02E8EBB4300CA9F96 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3EF2E8EBB4300CA9F96 /* AWSAPIPlugin */; };
+		5A5CF3F42E8EBB4300CA9F96 /* AWSS3StoragePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3F32E8EBB4300CA9F96 /* AWSS3StoragePlugin */; };
+		5A5CF3F62E8EBB4300CA9F96 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3F52E8EBB4300CA9F96 /* Amplify */; };
+		5A5CF3F82E8EBBD000CA9F96 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3F72E8EBBD000CA9F96 /* AWSCognitoAuthPlugin */; };
+		5A5CF3FB2E8EC6E000CA9F96 /* SampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5A5CF3F92E8EC6DF00CA9F96 /* SampleVideo.mp4 */; };
+		927CAF03FC129E71E07677CF /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B204110D2F65429BAEAE889 /* amplifyconfiguration.json */; };
+		E9662658EB4A3CE6268B0A2E /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = E33869C40BF34FF550B79D51 /* awsconfiguration.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AF58B752E8EA92F00100B0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AF58B5F2E8EA92D00100B0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AF58B662E8EA92D00100B0E;
+			remoteInfo = CloudCast;
+		};
+		5AF58B7F2E8EA92F00100B0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AF58B5F2E8EA92D00100B0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AF58B662E8EA92D00100B0E;
+			remoteInfo = CloudCast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A338B592E9014D100CD964D /* AmplifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyService.swift; sourceTree = "<group>"; };
+		5A5CF3F92E8EC6DF00CA9F96 /* SampleVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = SampleVideo.mp4; sourceTree = "<group>"; };
+		5AF58B672E8EA92D00100B0E /* CloudCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AF58B742E8EA92F00100B0E /* CloudCastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AF58B7E2E8EA92F00100B0E /* CloudCastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CloudCastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B204110D2F65429BAEAE889 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
+		E33869C40BF34FF550B79D51 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5AF58B692E8EA92D00100B0E /* CloudCast */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CloudCast;
+			sourceTree = "<group>";
+		};
+		5AF58B772E8EA92F00100B0E /* CloudCastTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CloudCastTests;
+			sourceTree = "<group>";
+		};
+		5AF58B812E8EA92F00100B0E /* CloudCastUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CloudCastUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AF58B642E8EA92D00100B0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5CF3F02E8EBB4300CA9F96 /* AWSAPIPlugin in Frameworks */,
+				5A5CF3F82E8EBBD000CA9F96 /* AWSCognitoAuthPlugin in Frameworks */,
+				5A5CF3F62E8EBB4300CA9F96 /* Amplify in Frameworks */,
+				5A5CF3F42E8EBB4300CA9F96 /* AWSS3StoragePlugin in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF58B712E8EA92F00100B0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF58B7B2E8EA92F00100B0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A5CF3FA2E8EC6DF00CA9F96 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				5A5CF3F92E8EC6DF00CA9F96 /* SampleVideo.mp4 */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		5AF58B5E2E8EA92D00100B0E = {
+			isa = PBXGroup;
+			children = (
+				5AF58B692E8EA92D00100B0E /* CloudCast */,
+				5AF58B772E8EA92F00100B0E /* CloudCastTests */,
+				5AF58B812E8EA92F00100B0E /* CloudCastUITests */,
+				5AF58B682E8EA92D00100B0E /* Products */,
+				C09C6CCD0F0E5746ADCD120C /* AmplifyConfig */,
+				5A5CF3FA2E8EC6DF00CA9F96 /* Video */,
+				C9857FF95E2D6BB4130EC783 /* AmplifyModels */,
+				5A338B592E9014D100CD964D /* AmplifyService.swift */,
+			);
+			sourceTree = "<group>";
+		};
+		5AF58B682E8EA92D00100B0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AF58B672E8EA92D00100B0E /* CloudCast.app */,
+				5AF58B742E8EA92F00100B0E /* CloudCastTests.xctest */,
+				5AF58B7E2E8EA92F00100B0E /* CloudCastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C09C6CCD0F0E5746ADCD120C /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				E33869C40BF34FF550B79D51 /* awsconfiguration.json */,
+				7B204110D2F65429BAEAE889 /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
+		C9857FF95E2D6BB4130EC783 /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AmplifyModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AF58B662E8EA92D00100B0E /* CloudCast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AF58B882E8EA92F00100B0E /* Build configuration list for PBXNativeTarget "CloudCast" */;
+			buildPhases = (
+				5AF58B632E8EA92D00100B0E /* Sources */,
+				5AF58B642E8EA92D00100B0E /* Frameworks */,
+				5AF58B652E8EA92D00100B0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5AF58B692E8EA92D00100B0E /* CloudCast */,
+			);
+			name = CloudCast;
+			packageProductDependencies = (
+				5A5CF3EF2E8EBB4300CA9F96 /* AWSAPIPlugin */,
+				5A5CF3F12E8EBB4300CA9F96 /* AWSCloudWatchLoggingPlugin */,
+				5A5CF3F32E8EBB4300CA9F96 /* AWSS3StoragePlugin */,
+				5A5CF3F52E8EBB4300CA9F96 /* Amplify */,
+				5A5CF3F72E8EBBD000CA9F96 /* AWSCognitoAuthPlugin */,
+			);
+			productName = CloudCast;
+			productReference = 5AF58B672E8EA92D00100B0E /* CloudCast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5AF58B732E8EA92F00100B0E /* CloudCastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AF58B8B2E8EA92F00100B0E /* Build configuration list for PBXNativeTarget "CloudCastTests" */;
+			buildPhases = (
+				5AF58B702E8EA92F00100B0E /* Sources */,
+				5AF58B712E8EA92F00100B0E /* Frameworks */,
+				5AF58B722E8EA92F00100B0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AF58B762E8EA92F00100B0E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5AF58B772E8EA92F00100B0E /* CloudCastTests */,
+			);
+			name = CloudCastTests;
+			packageProductDependencies = (
+			);
+			productName = CloudCastTests;
+			productReference = 5AF58B742E8EA92F00100B0E /* CloudCastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5AF58B7D2E8EA92F00100B0E /* CloudCastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AF58B8E2E8EA92F00100B0E /* Build configuration list for PBXNativeTarget "CloudCastUITests" */;
+			buildPhases = (
+				5AF58B7A2E8EA92F00100B0E /* Sources */,
+				5AF58B7B2E8EA92F00100B0E /* Frameworks */,
+				5AF58B7C2E8EA92F00100B0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AF58B802E8EA92F00100B0E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5AF58B812E8EA92F00100B0E /* CloudCastUITests */,
+			);
+			name = CloudCastUITests;
+			packageProductDependencies = (
+			);
+			productName = CloudCastUITests;
+			productReference = 5AF58B7E2E8EA92F00100B0E /* CloudCastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AF58B5F2E8EA92D00100B0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					5AF58B662E8EA92D00100B0E = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					5AF58B732E8EA92F00100B0E = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 5AF58B662E8EA92D00100B0E;
+					};
+					5AF58B7D2E8EA92F00100B0E = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 5AF58B662E8EA92D00100B0E;
+					};
+				};
+			};
+			buildConfigurationList = 5AF58B622E8EA92D00100B0E /* Build configuration list for PBXProject "CloudCast" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5AF58B5E2E8EA92D00100B0E;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5AF58B682E8EA92D00100B0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AF58B662E8EA92D00100B0E /* CloudCast */,
+				5AF58B732E8EA92F00100B0E /* CloudCastTests */,
+				5AF58B7D2E8EA92F00100B0E /* CloudCastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5AF58B652E8EA92D00100B0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A5CF3FB2E8EC6E000CA9F96 /* SampleVideo.mp4 in Resources */,
+				E9662658EB4A3CE6268B0A2E /* awsconfiguration.json in Resources */,
+				927CAF03FC129E71E07677CF /* amplifyconfiguration.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF58B722E8EA92F00100B0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF58B7C2E8EA92F00100B0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AF58B632E8EA92D00100B0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A338B5A2E9014D100CD964D /* AmplifyService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF58B702E8EA92F00100B0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF58B7A2E8EA92F00100B0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AF58B762E8EA92F00100B0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AF58B662E8EA92D00100B0E /* CloudCast */;
+			targetProxy = 5AF58B752E8EA92F00100B0E /* PBXContainerItemProxy */;
+		};
+		5AF58B802E8EA92F00100B0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AF58B662E8EA92D00100B0E /* CloudCast */;
+			targetProxy = 5AF58B7F2E8EA92F00100B0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5AF58B862E8EA92F00100B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5AF58B872E8EA92F00100B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AF58B892E8EA92F00100B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ba.CloudCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5AF58B8A2E8EA92F00100B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ba.CloudCast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5AF58B8C2E8EA92F00100B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ba.CloudCastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CloudCast";
+			};
+			name = Debug;
+		};
+		5AF58B8D2E8EA92F00100B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ba.CloudCastTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CloudCast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CloudCast";
+			};
+			name = Release;
+		};
+		5AF58B8F2E8EA92F00100B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ba.CloudCastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CloudCast;
+			};
+			name = Debug;
+		};
+		5AF58B902E8EA92F00100B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8KV9FCD773;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ba.CloudCastUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CloudCast;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AF58B622E8EA92D00100B0E /* Build configuration list for PBXProject "CloudCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AF58B862E8EA92F00100B0E /* Debug */,
+				5AF58B872E8EA92F00100B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AF58B882E8EA92F00100B0E /* Build configuration list for PBXNativeTarget "CloudCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AF58B892E8EA92F00100B0E /* Debug */,
+				5AF58B8A2E8EA92F00100B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AF58B8B2E8EA92F00100B0E /* Build configuration list for PBXNativeTarget "CloudCastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AF58B8C2E8EA92F00100B0E /* Debug */,
+				5AF58B8D2E8EA92F00100B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AF58B8E2E8EA92F00100B0E /* Build configuration list for PBXNativeTarget "CloudCastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AF58B8F2E8EA92F00100B0E /* Debug */,
+				5AF58B902E8EA92F00100B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aws-amplify/amplify-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.51.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A5CF3EF2E8EBB4300CA9F96 /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSAPIPlugin;
+		};
+		5A5CF3F12E8EBB4300CA9F96 /* AWSCloudWatchLoggingPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCloudWatchLoggingPlugin;
+		};
+		5A5CF3F32E8EBB4300CA9F96 /* AWSS3StoragePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSS3StoragePlugin;
+		};
+		5A5CF3F52E8EBB4300CA9F96 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = Amplify;
+		};
+		5A5CF3F72E8EBBD000CA9F96 /* AWSCognitoAuthPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A5CF3EE2E8EB97C00CA9F96 /* XCRemoteSwiftPackageReference "amplify-swift" */;
+			productName = AWSCognitoAuthPlugin;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5AF58B5F2E8EA92D00100B0E /* Project object */;
+}

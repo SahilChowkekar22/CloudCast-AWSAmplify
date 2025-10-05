@@ -1,0 +1,18 @@
+{
+  "resourceName": "s33a7f31c4",
+  "policyUUID": "3a7f31c4",
+  "bucketName": "cloudcast0f7f4bac2dac49ccafdfd15850bc7c06",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "S3Triggerd27ff1bf",
+  "groupAccess": {}
+}
