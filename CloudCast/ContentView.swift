@@ -5,6 +5,13 @@
 //  Created by Sahil ChowKekar on 10/2/25.
 //
 
+//
+//  ContentView.swift
+//  CloudCast
+//
+//  Created by Sahil ChowKekar on 10/2/25.
+//
+
 import SwiftUI
 import Amplify
 import UniformTypeIdentifiers
@@ -12,15 +19,17 @@ import UniformTypeIdentifiers
 struct ContentView: View {
     @EnvironmentObject private var amplify: AmplifyService
     @State private var isUploading = false
+    @State private var isDownloading = false
     @State private var message: String?
     @State private var showFileImporter = false
     @State private var selectedVideoURL: URL?
+    @State private var lastUploadedKey: String?   // store last uploaded key for download
 
     var body: some View {
         Group {
             if let error = amplify.configurationError {
                 VStack(spacing: 12) {
-                    Text(" Amplify configuration failed")
+                    Text("Amplify configuration failed")
                         .font(.headline)
                     Text(error.localizedDescription)
                         .font(.footnote)
@@ -50,11 +59,23 @@ struct ContentView: View {
                                                                     withExtension: "mp4") {
                                     uploadVideo(fileURL: bundledURL)
                                 } else {
-                                    message = " Bundled video not found"
+                                    message = "Bundled video not found"
                                 }
                             }
                         }
                     }
+
+                    // Download button (only shows if we have uploaded something)
+                    if let key = lastUploadedKey {
+                        if isDownloading {
+                            ProgressView("Downloading video...")
+                        } else {
+                            Button("⬇️ Download Last Uploaded Video") {
+                                downloadVideo(withKey: key)
+                            }
+                        }
+                    }
+
                     if let msg = message {
                         Text(msg)
                             .foregroundColor(msg.contains("✅") ? .green : .red)
@@ -75,54 +96,96 @@ struct ContentView: View {
                             uploadVideo(fileURL: pickedURL)
                         }
                     case .failure(let error):
-                        message = " Failed to pick file: \(error.localizedDescription)"
+                        message = "Failed to pick file: \(error.localizedDescription)"
                     }
                 }
             }
         }
     }
 
-
+    // MARK: - Upload Video
     func uploadVideo(fileURL: URL) {
         guard amplify.isConfigured else {
-            message = " Amplify is not configured yet. Please wait."
+            message = "Amplify is not configured yet. Please wait."
             return
         }
 
         isUploading = true
         let key = "uploads/\(UUID().uuidString).mp4"
+        lastUploadedKey = key
 
         Task {
             do {
-                // Start the upload
-                let uploadTask = Amplify.Storage.uploadFile(key: key, local: fileURL)
+                // Start upload
+                let options = StorageUploadFileRequest.Options(accessLevel: .guest)
+                let uploadTask = Amplify.Storage.uploadFile(key: key, local: fileURL, options: options)
 
-                
+                // Observe progress
                 for try await progress in await uploadTask.progress {
                     await MainActor.run {
                         message = String(format: "📤 Uploading... %.0f%%", progress.fractionCompleted * 100)
                     }
                 }
 
-                // Wait for completion (returns the uploaded key as String)
+                // Wait for completion
                 let uploadedKey = try await uploadTask.value
 
                 await MainActor.run {
                     isUploading = false
-                    message = " Upload complete: \(uploadedKey)"
+                    message = "✅ Upload complete: \(uploadedKey)"
                 }
 
             } catch {
                 await MainActor.run {
                     isUploading = false
-                    message = " Upload failed: \(error.localizedDescription)"
+                    message = "❌ Upload failed: \(error.localizedDescription)"
                 }
             }
         }
     }
 
+    // MARK: - Download Video
+    func downloadVideo(withKey key: String) {
+        guard amplify.isConfigured else {
+            message = "Amplify is not configured yet. Please wait."
+            return
+        }
+
+        isDownloading = true
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let localFileURL = documentsURL.appendingPathComponent("downloaded_video.mp4")
+
+        Task {
+            do {
+                let options = StorageDownloadFileRequest.Options(accessLevel: .guest)
+                let downloadTask = Amplify.Storage.downloadFile(key: key, local: localFileURL, options: options)
+
+                // Track progress
+                for try await progress in await downloadTask.progress {
+                    await MainActor.run {
+                        message = String(format: "⬇️ Downloading... %.0f%%", progress.fractionCompleted * 100)
+                    }
+                }
+
+                _ = try await downloadTask.value
+
+                await MainActor.run {
+                    isDownloading = false
+                    message = "✅ Downloaded to: \(localFileURL.lastPathComponent)"
+                    print("📁 Saved at: \(localFileURL.path)")
+                }
+
+            } catch {
+                await MainActor.run {
+                    isDownloading = false
+                    message = "❌ Download failed: \(error.localizedDescription)"
+                }
+            }
+        }
+    }
 }
 
 #Preview {
     ContentView()
 }
+
