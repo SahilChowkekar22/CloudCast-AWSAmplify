@@ -13,6 +13,7 @@
 		5A5CF3F62E8EBB4300CA9F96 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3F52E8EBB4300CA9F96 /* Amplify */; };
 		5A5CF3F82E8EBBD000CA9F96 /* AWSCognitoAuthPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3F72E8EBBD000CA9F96 /* AWSCognitoAuthPlugin */; };
 		5A5CF3FB2E8EC6E000CA9F96 /* SampleVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 5A5CF3F92E8EC6DF00CA9F96 /* SampleVideo.mp4 */; };
+		5ADB15272E96987100779F5C /* AWSCloudWatchLoggingPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 5A5CF3F12E8EBB4300CA9F96 /* AWSCloudWatchLoggingPlugin */; };
 		927CAF03FC129E71E07677CF /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 7B204110D2F65429BAEAE889 /* amplifyconfiguration.json */; };
 		E9662658EB4A3CE6268B0A2E /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = E33869C40BF34FF550B79D51 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
@@ -44,9 +45,22 @@
 		E33869C40BF34FF550B79D51 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5ADB15462E96ABDB00779F5C /* Exceptions for "CloudCast" folder in "CloudCast" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5AF58B662E8EA92D00100B0E /* CloudCast */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5AF58B692E8EA92D00100B0E /* CloudCast */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5ADB15462E96ABDB00779F5C /* Exceptions for "CloudCast" folder in "CloudCast" target */,
+			);
 			path = CloudCast;
 			sourceTree = "<group>";
 		};
@@ -67,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ADB15272E96987100779F5C /* AWSCloudWatchLoggingPlugin in Frameworks */,
 				5A5CF3F02E8EBB4300CA9F96 /* AWSAPIPlugin in Frameworks */,
 				5A5CF3F82E8EBBD000CA9F96 /* AWSCognitoAuthPlugin in Frameworks */,
 				5A5CF3F62E8EBB4300CA9F96 /* Amplify in Frameworks */,
@@ -459,6 +474,7 @@
 				DEVELOPMENT_TEAM = 8KV9FCD773;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloudCast/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -491,6 +507,7 @@
 				DEVELOPMENT_TEAM = 8KV9FCD773;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CloudCast/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

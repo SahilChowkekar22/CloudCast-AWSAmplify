@@ -5,12 +5,6 @@
 //  Created by Sahil ChowKekar on 10/2/25.
 //
 
-//
-//  ContentView.swift
-//  CloudCast
-//
-//  Created by Sahil ChowKekar on 10/2/25.
-//
 
 import SwiftUI
 import Amplify
@@ -70,7 +64,7 @@ struct ContentView: View {
                         if isDownloading {
                             ProgressView("Downloading video...")
                         } else {
-                            Button("⬇️ Download Last Uploaded Video") {
+                            Button("Download Last Uploaded Video") {
                                 downloadVideo(withKey: key)
                             }
                         }
@@ -103,7 +97,7 @@ struct ContentView: View {
         }
     }
 
-    // MARK: - Upload Video
+    // Upload Video
     func uploadVideo(fileURL: URL) {
         guard amplify.isConfigured else {
             message = "Amplify is not configured yet. Please wait."
@@ -114,6 +108,9 @@ struct ContentView: View {
         let key = "uploads/\(UUID().uuidString).mp4"
         lastUploadedKey = key
 
+        // Save metadata for recovery
+        amplify.persistUploadInfo(key: key, fileURL: fileURL)
+        
         Task {
             do {
                 // Start upload
@@ -132,19 +129,21 @@ struct ContentView: View {
 
                 await MainActor.run {
                     isUploading = false
-                    message = "✅ Upload complete: \(uploadedKey)"
+                    message = "Upload complete: \(uploadedKey)"
                 }
+                //Clear pending record
+                amplify.clearPendingUpload()
 
             } catch {
                 await MainActor.run {
                     isUploading = false
-                    message = "❌ Upload failed: \(error.localizedDescription)"
+                    message = "Upload failed: \(error.localizedDescription)"
                 }
             }
         }
     }
 
-    // MARK: - Download Video
+    //Download Video
     func downloadVideo(withKey key: String) {
         guard amplify.isConfigured else {
             message = "Amplify is not configured yet. Please wait."
@@ -154,16 +153,21 @@ struct ContentView: View {
         isDownloading = true
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let localFileURL = documentsURL.appendingPathComponent("downloaded_video.mp4")
+        
+        // Save pending download info
+        amplify.persistDownloadInfo(key: key, localFile: localFileURL)
 
         Task {
             do {
                 let options = StorageDownloadFileRequest.Options(accessLevel: .guest)
                 let downloadTask = Amplify.Storage.downloadFile(key: key, local: localFileURL, options: options)
+                
+                
 
                 // Track progress
                 for try await progress in await downloadTask.progress {
                     await MainActor.run {
-                        message = String(format: "⬇️ Downloading... %.0f%%", progress.fractionCompleted * 100)
+                        message = String(format: "Downloading... %.0f%%", progress.fractionCompleted * 100)
                     }
                 }
 
@@ -171,14 +175,17 @@ struct ContentView: View {
 
                 await MainActor.run {
                     isDownloading = false
-                    message = "✅ Downloaded to: \(localFileURL.lastPathComponent)"
-                    print("📁 Saved at: \(localFileURL.path)")
+                    message = "Downloaded to: \(localFileURL.lastPathComponent)"
+                    print("Saved at: \(localFileURL.path)")
                 }
+                
+                // Clear download metadata
+                amplify.clearPendingDownload()
 
             } catch {
                 await MainActor.run {
                     isDownloading = false
-                    message = "❌ Download failed: \(error.localizedDescription)"
+                    message = "Download failed: \(error.localizedDescription)"
                 }
             }
         }
